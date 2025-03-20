@@ -10,8 +10,8 @@ class Stack{//object is bring created
     Stack(){//running a constructor 
         //bedefault so that when obejct wull be created it 
         //initailaize it with the value given below
-        top=-1;
-        size=1000; 
+        top=-1;  // Initialize top to -1 (stack is empty)
+        size=1000; //setsize to 1000 that is space complexity is o(n)
         arr= new int(size);  // Dynamically allocate an array of integers
     }
     void push(int val){
@@ -26,9 +26,15 @@ class Stack{//object is bring created
         if(top==-1){
             cout<<"Stack Underflow"<<endl;
         }
-        else
-        top--;
+        else{
+          int x = arr[top];   // Get the top element
+          top--;               // Decrement the top index
+           return x;           // Return the popped element
+       }
     }
+ int Top() {
+    return arr[top];
+  }
     int size(){
         return top+1;
     }
