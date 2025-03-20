@@ -15,7 +15,7 @@ class Stack{//object is bring created
         arr= new int(size);  // Dynamically allocate an array of integers
     }
     void push(int val){
-        if(top==size){
+        if(top==size-1){
             cout<<"Stack Overflow"<<endl;
         }
         else{
